@@ -1,0 +1,117 @@
+
+    <style>
+        body {
+            background-color: hsl(0, 0%, 88%);
+            color: hsl(0, 0%, 0%);
+            margin: 0;
+            font-family: Arial, sans-serif; 
+        }
+        @font-face {
+            font-family: 'Romie';
+            src: url('RomieTrial-Regular.otf') format('truetype'); 
+            font-weight: normal;
+            font-style: normal;
+        }
+        header {
+            position: fixed;
+            top: 20px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            width: 80%; 
+            background-color: hwb(0 62% 38%); 
+            padding: 5px 0; 
+            text-align: center;
+            border-radius: 10px; 
+            z-index: 1000;
+        }
+        .button {
+            display: inline-block;
+            background-color: hwb(0 49% 51%);
+            color: #fff;
+            padding: 8px 16px; 
+            border-radius: 10px; 
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 14px; 
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: left;
+            padding: 20px 10%;
+            font-size: 12px; 
+            font-family: Arial, sans-serif; 
+            color: #ccc;
+        }
+        .body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .quote {
+            max-width: 190%;
+            font-size: 20px;
+            line-height: 1.5;
+            font-family: 'Romie', Arial, sans-serif; 
+            opacity: 0; 
+            animation: fadeIn 3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .read-more {
+            color: #ccc; 
+            font-size: 12px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            text-align: left; 
+            margin-top: 40px; 
+            margin-left: 10%;
+            cursor: pointer; 
+        }
+        .read-more:hover {
+            color: white;
+        }
+        .footer-text {
+            color: #ccc; 
+            font-size: 12px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            text-align: left;
+            margin-top: 150px; 
+            margin-left: 0%;
+        }
+        .footer-text:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="biography.html" class="button">Biography</a>
+        <a href="https://www.youtube.com/watch?v=C42INHwTfDM" class="button">About</a>
+        <a href="index2.html" class="button">Home</a>
+    </nav>
+</header>
+
+<div class="body">
+    <p class="quote">Jun'ichirō Tanizaki (谷崎 潤一郎), Tanizaki Jun'ichirō, 24 July 1886 – 30 July 1965) was a Japanese author who is considered to be one of the most prominent figures in modern Japanese literature. The tone and subject matter of his work ranges from shocking depictions of sexuality and destructive erotic obsessions to subtle portrayals of the dynamics of family life within the context of the rapid changes in 20th-century Japanese society. Frequently, his stories are narrated in the context of a search for cultural identity in which constructions of the West and Japanese tradition are juxtaposed.</p>
+</div>
+
+</body>
+</html>
