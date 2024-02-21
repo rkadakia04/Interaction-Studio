@@ -1,7 +1,7 @@
 <style>
     body {
-        background-color: #000;
-        color: #fff;
+        background-color: #e2e2e2;
+        color: hwb(0 10% 90%);
         margin: 0;
         font-family: Arial, sans-serif; 
     }
@@ -17,7 +17,7 @@
         left: 50%; 
         transform: translateX(-50%); 
         width: 80%; 
-        background-color: #222; 
+        background-color: #9e9e9e; 
         padding: 5px 0; 
         text-align: center;
         border-radius: 10px; 
@@ -25,7 +25,7 @@
     }
     .button {
         display: inline-block;
-        background-color: #333;
+        background-color: #7d7d7d;
         color: #fff;
         padding: 8px 16px; 
         border-radius: 10px; 
@@ -90,14 +90,11 @@
     right: 50px; 
     width: 20px; 
     height: 20px; 
-    background-color: white;
+    background-color: hsl(0, 0%, 25%);
     border-radius: 50%;
     z-index: 1001; 
     cursor: pointer;
 }
-
-
-
 </style>
 </head>
 <body>
@@ -164,6 +161,10 @@
 <a href="#" class="footer-text">In Praise of Shadows, Jun'ichiro Tanizaki, by Rohan Kadakia. Rights Reserved.</a>
 </footer>
 
+<audio id="background-music" loop>
+    <source src="[no copyright music] 'Mesmerize' cute background music.mp3" type="audio/mp3">
+</audio>
+
 <script>
 function showNewQuote(event) {
     event.preventDefault();
@@ -202,9 +203,26 @@ function showFifthQuote(event) {
     fourthQuote.classList.add("slide-up");
     fifthQuote.style.display = "block";
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+        var backgroundMusic = document.getElementById('background-music');
+        backgroundMusic.play();
+    });
+
+    var circleLink = document.querySelector('.circle-link');
+    circleLink.addEventListener('click', function() {
+        var backgroundMusic = document.getElementById('background-music');
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+        } else {
+            backgroundMusic.pause();
+        }
+    });
+
 </script>
 
-<a href="index3.html" class="circle-link"></a>
+<a href="index2.html" class="circle-link"></a>
+
 
 </body>
 </html>
