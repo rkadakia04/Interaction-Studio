@@ -24,17 +24,7 @@
         z-index: 1000;
     }
 
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-        z-index: 9999;
-        opacity: 1;
-        transition: opacity 3s ease; /* 3 seconds fade out */
-    }
+   
 
     .button {
         display: inline-block;
@@ -128,7 +118,6 @@
     <p>I possess no specialized knowledge of architecture, but I understand that in the Gothic cathedral of the West, the roof is thrust up and up so as to place its pinnacle as high in the heavens as possible-and that herein is thought to lie its special beauty. In the temples of Japan, on the other hand, a roof of heavy tiles is first laid out, and in the deep, spacious shadows created by the eaves the rest of the structure is built. Nor is this true only of temples; in the palaces of the nobility and the houses of the common people, what first strikes the eye is the massive roof of tile or thatch and the heavy darkness that hangs beneath the eaves. Even at midday cavernous darkness spreads over all beneath the roof's edge, making entryway, doors, walls, and pillars all but invisible. The grand temples of Kyoto-Chion'in, Honganji-and the farmhouses of the remote countryside are alike in this respect: like most buildings of the past their roofs give the impression of possessing  far greater weight, height, and surface than all that stands beneath the eaves.</p>
 </div>
 
-<div class="overlay"></div>
 
 
 <a href="#" class="read-more" style="color: #aaa;" onclick="showNewQuote(event)">Read more</a>
@@ -243,12 +232,6 @@ circleLink.addEventListener('click', function() {
     }
 });
 
-window.onload = function() {
-    var overlay = document.querySelector('.overlay');
-    setTimeout(function() {
-        overlay.style.opacity = '0';
-    }, 3000); // 3000 milliseconds = 3 seconds
-};
 
 </script>
 
