@@ -205,20 +205,21 @@ function showFifthQuote(event) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-        var backgroundMusic = document.getElementById('background-music');
+    var backgroundMusic = document.getElementById('background-music');
+    backgroundMusic.volume = 0.1; 
+    backgroundMusic.play();
+});
+
+var circleLink = document.querySelector('.circle-link');
+circleLink.addEventListener('click', function() {
+    var backgroundMusic = document.getElementById('background-music');
+    if (backgroundMusic.paused) {
+        backgroundMusic.volume = 0.1; 
         backgroundMusic.play();
-    });
-
-    var circleLink = document.querySelector('.circle-link');
-    circleLink.addEventListener('click', function() {
-        var backgroundMusic = document.getElementById('background-music');
-        if (backgroundMusic.paused) {
-            backgroundMusic.play();
-        } else {
-            backgroundMusic.pause();
-        }
-    });
-
+    } else {
+        backgroundMusic.pause();
+    }
+});
 </script>
 
 <a href="index2.html" class="circle-link"></a>
