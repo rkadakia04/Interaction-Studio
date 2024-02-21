@@ -164,6 +164,10 @@
 <a href="#" class="footer-text">In Praise of Shadows, Jun'ichiro Tanizaki, by Rohan Kadakia. Rights Reserved.</a>
 </footer>
 
+<audio id="background-music" loop volume="0.1">
+    <source src="SOFT MUSIC.mp3" type="audio/mp3">
+</audio>
+
 <script>
 function showNewQuote(event) {
     event.preventDefault();
@@ -201,7 +205,27 @@ function showFifthQuote(event) {
 
     fourthQuote.classList.add("slide-up");
     fifthQuote.style.display = "block";
+
+    
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var backgroundMusic = document.getElementById('background-music');
+    backgroundMusic.volume = 0.1; 
+    backgroundMusic.play();
+});
+
+var circleLink = document.querySelector('.circle-link');
+circleLink.addEventListener('click', function() {
+    var backgroundMusic = document.getElementById('background-music');
+    if (backgroundMusic.paused) {
+        backgroundMusic.volume = 0.1; 
+        backgroundMusic.play();
+    } else {
+        backgroundMusic.pause();
+    }
+});
+
 </script>
 
 <a href="index3.html" class="circle-link"></a>
