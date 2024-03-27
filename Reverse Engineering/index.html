@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>HTML Reverse Engineering</title>
+    <style>
+      section { margin-top: 120px; }
+      #table-of-contents { margin: 80px 0; }
+      .grid-col-2 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      Core 2 Interaction: Lab – &nbsp;<em>HTML Reverse Engineering</em>
+    </header>
+
+    <section id="table-of-contents">
+      <ul>
+        <li><a href="#screenshot">Screenshot ↓</a></li>
+        <li><a href="#analysis">Analysis ↓</a></li>
+        <li><a href="#questions">Questions ↓</a></li>
+      </ul>
+    </section>
+
+    <section id="screenshot">
+      <h2>Screenshot</h2>
+      <img src="Screen Shot 2024-03-25 at 6.37.03 PM.png" alt width="1400" height="900" >
+    </section>
+
+    <section id="analysis">
+      <h2>Analysis</h2>
+      <div class="grid-col-2">
+        <div>
+          <pre id="analysis--simplified-html">
+            main#main
+             section#homepage-section collection module
+              div#apple-vision-pro
+               div#module-content
+               div#unit-wrapper bottom-copy-wrapper
+               a#unit-link
+               div#unit-copy-wrapper
+               div#unit-image-wrapper
+          </pre>
+        </div>
+        <div id="analysis--text">
+          <h3>main is in the body class. inside all the content is hosted and there are hero templates for the landing page. within that, there is the "data unit id" for the apple vision pro, which has module content and several wrappers within it.</h3>->
+        </div>
+      </div>
+    </section>
+
+    <section id="analysis--questions">
+      <h2>Questions</h2>
+      <ul>
+        <li>
+          although not mentioned in the simplifed code, what is aria-hidden and targets? They are frequently referenced in the screenshot code.
+        </li>
+      </ul>
+    </section>
+
+  </body>
+	
+</html>
