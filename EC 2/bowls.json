@@ -1,0 +1,32 @@
+{
+    "bowls": [
+      {
+        "name": "Chicken Bowl",
+        "image": "chicken_bowl.jpg",
+        "ratings": {
+          "taste": 4.5,
+          "service": 4.2,
+          "aesthetic": 3.8
+        }
+      },
+      {
+        "name": "Steak Bowl",
+        "image": "steak_bowl.jpg",
+        "ratings": {
+          "taste": 4.7,
+          "service": 4.0,
+          "aesthetic": 4.1
+        }
+      },
+      {
+        "name": "Vegetarian Bowl",
+        "image": "vegetarian_bowl.jpg",
+        "ratings": {
+          "taste": 4.3,
+          "service": 4.4,
+          "aesthetic": 4.0
+        }
+      }
+    ]
+  }
+  
