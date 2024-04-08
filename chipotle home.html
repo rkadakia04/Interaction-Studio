@@ -1,118 +1,68 @@
-
-<style>
-    body {
-        background-color: hwb(0 0% 100%);
-        color: rgb(255, 255, 255);
-        margin: 0;
-        font-family: Arial, sans-serif; 
-    }
-    @font-face {
-        font-family: 'Helvetica';
-        src: url('HelveticaNeueLTStd-Bd.otf') format('truetype'); 
-        font-weight: normal;
-        font-style: normal;
-    }
-    header {
-        position: fixed;
-        top: 20px; 
-        left: 50%; 
-        transform: translateX(-50%); 
-        width: 80%; 
-        background-color: rgb(42, 42, 42); 
-        padding: 5px 0; 
-        text-align: center;
-        border-radius: 10px; 
-        z-index: 1000;
-    }
-    .button {
-        display: inline-block;
-        background-color: #7d7d7d;
-        color: #fff;
-        padding: 8px 16px; 
-        border-radius: 10px; 
-        margin: 0 10px;
-        text-decoration: none;
-        font-size: 14px; 
-        transition: background-color 0.3s ease;
-    }
-    .button:hover {
-        background-color: #555;
-    }
-    footer {
-        text-align: left;
-        padding: 20px 10%;
-        font-size: 12px; 
-        font-family: Arial, sans-serif; 
-        color: #ccc;
-    }
-    .body {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    .quote {
-        max-width: 190%;
-        font-size: 20px;
-        line-height: 1.5;
-        font-family: 'Romie', Arial, sans-serif; 
-        opacity: 0; 
-        animation: fadeIn 3s ease forwards;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
-    .read-more {
-        color: #ccc; 
-        font-size: 12px;
-        text-decoration: none;
-        transition: color 0.3s ease;
-        display: block;
-        text-align: left; 
-        margin-top: 40px; 
-        margin-left: 10%;
-        cursor: pointer; 
-    }
-    .read-more:hover {
-        color: white;
-    }
-    .footer-text {
-        color: #ccc; 
-        font-size: 12px;
-        text-decoration: none;
-        transition: color 0.3s ease;
-        display: block;
-        text-align: left;
-        margin-top: 150px; 
-        margin-left: 0%;
-    }
-    .footer-text:hover {
-        color: white;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chipotle Bowl Ratings</title>
 </head>
 <body>
+  <h1>Chipotle Bowl Ratings</h1>
 
-<header>
-<nav>
-    <a href="testinggggg.html" class="button">Bowls</a>
-    <a href="chipotle about.html" class="button">About</a>
-    <a href="testingggg.html" class="button">More</a>
-</nav>
-</header>
+  <div id="bowls-container"></div>
 
-<div class="body">
-<p class="quote">A COLLECTION OF CHIPOTLE BOWLS.</p>
-</div>
+  <script>
+    // Fetch the JSON data
+    fetch('bowls.json')
+      .then(response => response.json())
+      .then(data => {
+        const bowlsContainer = document.getElementById('bowls-container');
 
+        // Loop through each bowl in the JSON data
+        data.bowls.forEach(bowl => {
+          // Create HTML elements to display each bowl
+          const bowlDiv = document.createElement('div');
+          bowlDiv.classList.add('bowl');
 
+          const bowlName = document.createElement('h2');
+          bowlName.textContent = bowl.name;
+
+          const bowlImage = document.createElement('img');
+          bowlImage.src = bowl.image;
+          bowlImage.alt = bowl.name;
+
+          const ratingsList = document.createElement('ul');
+          for (const ratingType in bowl.ratings) {
+            const ratingItem = document.createElement('li');
+            ratingItem.textContent = `${ratingType}: ${bowl.ratings[ratingType]}`;
+            ratingsList.appendChild(ratingItem);
+          }
+
+          // Append elements to the container
+          bowlDiv.appendChild(bowlName);
+          bowlDiv.appendChild(bowlImage);
+          bowlDiv.appendChild(ratingsList);
+          bowlsContainer.appendChild(bowlDiv);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching JSON:', error);
+      });
+  </script>
+
+  <style>
+    /* Simple styling for the bowls */
+    .bowl {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    img {
+      max-width: 200px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  </style>
 </body>
 </html>
