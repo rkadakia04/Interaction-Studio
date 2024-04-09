@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Ratings</title>
+    <style>
+        body {
+            font-family: Courier New, monospace; 
+            margin: 0; 
+            padding: 0; 
+            background-color: beige; 
+            color: #4d2600; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        header {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            background-color: hsl(0, 0%, 5%); 
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 20px; 
+            z-index: 1000;
+            color: beige; 
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5px;
+        }
+        .button {
+            background-color: hsl(0, 0%, 22%); 
+            padding: 8px 25px; 
+            border-radius: 15px; 
+            cursor: pointer;
+            margin: 0px; 
+            font-size: 14px; 
+        }
+        .paragraph {
+            text-align: center; 
+            font-size: 18px; 
+            line-height: 1.6; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="button-container">
+            <div class="button" id="bowls-btn">Bowls</div>
+            <div class="button" id="about-btn">About</div>
+            <div class="button">More</div>
+        </div>
+    </header>
+
+    <p class="paragraph">
+       I really love chipotle. Here are my opinions on 20 bowls that I've recently got for Core 2 Interaction class.
+    </p>
+
+    <script>
+        document.getElementById('bowls-btn').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('about-btn').addEventListener('click', function() {
+            window.location.href = 'about.html';
+        });
+    </script>
+</body>
+</html>

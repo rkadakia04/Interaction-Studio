@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Ratings</title>
+    <style>
+        body {
+            margin: 0; 
+            padding: 0;
+            background-image: url('ec bg img-1.png'); 
+            background-size: cover; 
+            background-position: center;
+            font-family: Courier New, monospace; 
+            color: #4d2600; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        header {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            background-color: hsl(0, 0%, 5%); 
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 20px; 
+            z-index: 1000;
+            color: beige; 
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5px;
+        }
+        .button {
+            background-color: hsl(0, 0%, 22%); 
+            padding: 8px 25px; 
+            border-radius: 15px; 
+            cursor: pointer;
+            margin: 0px; 
+            font-size: 14px; 
+        }
+        .title {
+            color: white; 
+            font-size: 36px; 
+            text-align: center; 
+            margin-bottom: 30px; 
+        }
+        .button-under-title {
+            background-color: hsl(0, 0%, 100%); 
+            color: #090909;
+            padding: 10px 20px;
+            border-radius: 25px; 
+            cursor: pointer;
+            font-size: 14px; 
+            transition: background-color 0.3s;
+        }
+        .button-under-title:hover {
+            background-color: hsl(0, 0%, 100%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="button-container">
+            <div class="button" id="bowls-btn">Bowls</div>
+            <div class="button" id="about-btn">About</div>
+            <div class="button">More</div>
+        </div>
+    </header>
+
+    <div class="title">CHIPOTLE BOWLS (AND MY HUMBLE OPINION)</div>
+
+    <div class="button-under-title" id="lets-go-btn">LET'S GO</div>
+
+    <script>
+       
+        document.getElementById('bowls-btn').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+
+        
+        document.getElementById('about-btn').addEventListener('click', function() {
+            window.location.href = 'about.html';
+        });
+
+        document.getElementById('lets-go-btn').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
